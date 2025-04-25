@@ -1,59 +1,85 @@
-# 🧪 Parabank Registration & Login Automation (Selenium + ExtentReports + CsvHelper)
 
-This project automates the registration, login, and logout functionalities of the [Parabank](https://parabank.parasoft.com/parabank/index.htm) demo website using **Selenium WebDriver** with **ChromeDriver**. It reads user data from a CSV file and generates an HTML report using **ExtentReports**.
+# 🧪 Parabank Registration & Login Automation (macOS Friendly)
 
----
+This is a Selenium automation project for testing **user registration** and **login** on [Parabank](https://parabank.parasoft.com/parabank/index.htm).  
+It uses **C# (.NET)**, **Selenium WebDriver**, **ExtentReports**, and **CsvHelper** to read test data from a CSV file.
 
 ---
 
 ## ✅ Features
 
-- Automated browser testing with **Selenium WebDriver**
-- Reads multiple test data sets from **CSV file** using CsvHelper
-- Validates:
-  - User Registration
-  - Logout after registration
-  - Login with newly registered credentials
-  - Successful Logout after login
-- Real-time **test reporting with ExtentReports** (HTML format)
-- Uses **explicit waits** for reliable DOM interaction
+- Register users using data from a CSV file
+- Perform login/logout actions
+- Validate successful login
+- Generate a styled HTML report with test steps and statuses
 
 ---
 
-## 🧑‍💻 Tech Stack
+## 🛠️ Requirements
 
-- C# (.NET)
-- Selenium WebDriver
-- ChromeDriver
-- CsvHelper
-- ExtentReports
-- WebDriverWait (Explicit Waits)
+- macOS (tested on Ventura and Sonoma)
+- [.NET SDK](https://dotnet.microsoft.com/en-us/download) installed
+- Google Chrome browser
+- ChromeDriver (make sure it matches your Chrome version and is in your PATH)
 
 ---
 
-## 🛠️ Prerequisites
+## 🚀 How to Run (macOS)
 
-- [.NET SDK](https://dotnet.microsoft.com/download)
-- Google Chrome
-- [ChromeDriver](https://sites.google.com/chromium.org/driver/)
-- NuGet packages:
-  - `Selenium.WebDriver`
-  - `Selenium.WebDriver.ChromeDriver`
-  - `CsvHelper`
-  - `ExtentReports`
-  - `Selenium.Support`
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/your-username/Parabank-Automation.git
+cd Parabank-Automation
+```
+
+**2. Restore NuGet packages**
+
+```bash
+dotnet restore
+```
+
+**3. Run the project**
+
+```bash
+dotnet run
+```
+
+📂 The HTML test report will be generated at:
+
+```
+/Users/dishakhan/SQAT Project/Report/Report_File.html
+```
+
+Open this file in your browser to view test results.
 
 ---
 
-## 📄 CSV Format
+## 📁 Project Structure
 
-Make sure your `users.csv` file is properly formatted like below:
+```
+Parabank-Automation/
+├── users.csv               # Input file for user data
+├── Report/                 # Output folder for test reports
+│   └── Report_File.html    # Generated test report
+├── Program.cs              # Main automation script
+└── README.md               # This file
+```
 
-```csv
-FirstName,LastName,Address,City,State,ZipCode,Phone,SSN,Username,Password
-Jane,Doe,123 Elm Street,Springfield,IL,62704,1234567890,123-45-6789,janedoe01,password123
-John,Smith,456 Oak Avenue,Centerville,CA,90210,9876543210,987-65-4321,johnsmith22,password321
+---
 
+## 📸 Report Preview
+
+Test actions are logged using **ExtentReports** with status info (Pass/Fail), user details, and screenshots (optional if implemented).
+
+---
+
+## 👤 Author
+
+**Disha Khan**  
+📧 Email: nlkdisha31@gmail.com.com  
+
+---
 
 
 
